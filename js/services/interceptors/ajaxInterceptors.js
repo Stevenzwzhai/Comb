@@ -3,27 +3,22 @@
  */
 
 App
-    .factory("AjaxInterceptors",function(cfpLoadingBar,$q,$rootScope){
+    .factory("AjaxInterceptors",function(cfpLoadingBar,$q,ipCookie,$rootScope){
         return {
             //成功请求
             'request' : function(config ){
-                cfpLoadingBar.start();
+
+                    cfpLoadingBar.start();
 
                     if(config.method == "POST" ||  config.method == "PUT"){
-
-                             //这里选择携带token
-                            //config.data.data = config.data.data || {};
-                            //config.data.data.token  =  localStorage.getItem("token");
-
+                        config.headers['Content-Type'] = "application/x-www-form-urlencoded;charset=utf-8";
+                        config.transformRequest = function(obj) {
+                            var str = [];
+                            for(var p in obj)
+                                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                            return str.join("&");
+                        }
                     }
-
-                    //else if(config.method = "GET"){
-                    //    if( config.headers['Content-Type'] == "application/json"){
-                    //        config.params =   config.params || {};
-                    //        config.params.token = $window.sessionStorage.token;
-                    //    }
-                    //}
-
                 return config ;
             },
 
@@ -38,6 +33,7 @@ App
 
                 var temp = {};
 
+                console.log("err : ",response.status);
                 switch (response.status) {
                     case (500):
                         temp.content  = "服务器错误(500)";
@@ -52,11 +48,11 @@ App
                     case (404):
                         temp.content  = "没找到该资源(404)";
                         break;
-                    case (408):
+                    case (408) :
                         temp.content  = "服务器超时";
                         break;
                     default:
-                        temp.content  = "网络错误";
+                        temp.content  = "网络连接断开或者请重新登录!";
                 }
 
                 $rootScope.toastError(temp.content);

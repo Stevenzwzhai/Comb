@@ -1,5 +1,5 @@
 App
-    .factory("Util", function ($window) {
+    .factory("Util", function ($window,$http,$q) {
         var Util = {
             uuid: function () {
                 var s = [];
@@ -142,7 +142,64 @@ App
                 return str_url.match(strRegex);
 
 
+            },
+
+            getParamByName: function (url,paras) {
+                var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");
+                var paraObj = {}
+                for (i=0; j=paraString[i]; i++){
+                    paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);
+                }
+                var returnValue = paraObj[paras.toLowerCase()];
+                if(typeof(returnValue)=="undefined"){
+                    return "";
+                }else{
+                    return returnValue;
+                }
+            },
+
+            endFun : function(scope){
+                scope.isSubmit =  false;
+            },
+
+
+            getWithCredentials : function(url,data,option){
+                var defer =  $q.defer();
+                $http.get(url,
+                    {
+                        params :data,
+                        withCredentials: true
+                    })
+                    .success(function(result){
+                        defer.resolve(result);
+                    })
+                    .error(function(err){
+                        console.error("class error");
+                        defer.reject(err);
+                    });
+                return  defer.promise;
+            },
+
+            writeCookie : function(obj){
+
+                var script = document.createElement("script");
+                script.src = obj.url+"?iauth-embed-token="+obj.value;
+
+                script.onerror = function(){
+                    console.log("error...");
+                }
+
+                $("body").append(script);
+                //postMessage方式
+                //var temp  = JSON.stringify(obj);
+                //window.frames[0].postMessage(temp,'*');
+            },
+            dataLength : function(obj){
+
+                return JSON.stringify(obj).length;
             }
+
+
         };
         return Util;
 

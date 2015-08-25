@@ -1,0 +1,54 @@
+
+<div class="honey-wrap">
+
+    <div class="honey-inner">
+
+
+        <!-- commpent -->
+        <section class="component" ng-include="'tpl/function/toolbar.html'"></section>
+        <!-- commpent -->
+
+
+
+        <table class="table table-bordered table-striped table-hover " style="margin-top: 20px">
+
+            <thead>
+            <tr>
+                <th>日期</th>
+                <th>{{fm.userType |userType}}</th>
+                <th>1{{fm.grain |grain}}后</th>
+                <th>2{{fm.grain |grain}}后</th>
+                <th>3{{fm.grain |grain}}后</th>
+                <th>4{{fm.grain |grain}}后</th>
+                <th>5{{fm.grain |grain}}后</th>
+                <th>6{{fm.grain |grain}}后</th>
+                <th>7{{fm.grain |grain}}后</th>
+                <th ng-if="fm.grain=='day'">14天后</th>
+                <th ng-if="fm.grain=='day'">30天后</th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+
+            <tr ng-repeat="data in params">
+                <th scope="row">{{data.date}}</th>
+                <td>{{data.users}}</td>
+                <td>{{data['1']}}</td>
+                <td>{{data['2']}}</td>
+                <td>{{data['3']}}</td>
+                <td>{{data['4']}}</td>
+                <td>{{data['5']}}</td>
+                <td>{{data['6']}}</td>
+                <td>{{data['7']}}</td>
+                <td  ng-if="fm.grain=='day'">{{data['14']}}</td>
+                <td  ng-if="fm.grain=='day'">{{data['30']}}</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+</div>

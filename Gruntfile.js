@@ -8,7 +8,7 @@ module.exports = function(grunt) {
             },
             cicadaCtl: {
                 src  : [
-                    "./js/controllers/**/*.js",
+                    "./js/controller/**/*.js",
                     ],
                 dest : "./dist/js/all.ctrl.js"
             },
@@ -20,22 +20,23 @@ module.exports = function(grunt) {
             },
             cicadaDec: {
                 src  : [
-                    "./js/directive/**/*.js",
+                    "./js/dirs/**/*.js",
                 ],
                 dest : "./dist/js/all.dec.js"
             },
-            cicadaOther : {
+
+            cicadaFilter: {
                 src  : [
-                    "./js/interceptors/**/*.js",
+                    "./js/filters/**/*.js",
                 ],
-                dest : "./dist/js/all.other.js"
+                dest : "./dist/js/all.filter.js"
             },
             cicadaAll : {
                 src  : [
                     "./dist/js/all.ctrl.js",
                     "./dist/js/all.sev.js",
                     "./dist/js/all.dec.js",
-                    "./dist/js/all.other.js"
+                    "./dist/js/all.filter.js",
                 ],
                 dest : "./dist/js/all.js"
             }
@@ -66,7 +67,7 @@ module.exports = function(grunt) {
 
 
     //测试打包loop
-    grunt.registerTask('build', ['concat:cicadaCtl','concat:cicadaSev','concat:cicadaDec','concat:cicadaOther','concat:cicadaAll']);
+    grunt.registerTask('build', ['concat:cicadaCtl','concat:cicadaSev','concat:cicadaDec','concat:cicadaFilter','concat:cicadaAll']);
     grunt.registerTask('jsMin', ['uglify']);
 
 };

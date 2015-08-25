@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title></title>
+    <title>蜂巢 - 大数据服务平台</title>
 
     <!-- 防止缓存 -->
     <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
@@ -11,18 +11,28 @@
 
     <!-- 基本配置 -->
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="renderer" content="webkit">
     <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta name="author" content="sherlock221b && huangzheqian"/>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript">
+        window.location.href = "./ie8/ie8.html";
+    </script>
+    <![endif]-->
+
 
 
     <!-- skin -->
     <link rel="stylesheet" type="text/css"   href="lib/bootstrap/less/bootstrap.css" />
     <link rel="stylesheet" type="text/css"   href="lib/toast/angular-toastr.min.css" />
+    <link rel="stylesheet" href="lib/awe/css/font-awesome.min.css" />
     <link rel="stylesheet" href="lib/angular/loadingBar/lbar.black.css" />
     <link rel="stylesheet" href="css/common/module.css" />
 
     <!-- 业务 -->
     <link rel="stylesheet"   href="css/all.css" />
+
 
     <!-- angular主库 -->
     <script type="text/javascript" src="lib/angular/angular.min.js"></script>
@@ -30,12 +40,19 @@
     <script type="text/javascript" src="lib/angular/angular-sanitize.min.js"></script>
     <script type="text/javascript" src="lib/angular/angular-animate.min.js"></script>
     <script type="text/javascript" src="lib/angular/loadingBar/loading-bar.min.js"></script>
-    <script type="text/javascript" src="lib/angular/angular-cookies.js"></script>
+
+    <script type="text/javascript" src="lib/angular/angular-cookie.min.js"></script>
+
+
+    <!--组件 -->
+    <link rel="stylesheet"   href="lib/form/pretty-checkable.css" />
+    <script type="text/javascript" src="lib/form/angular-pretty-checkable.min.js"></script>
 
     <!-- bootstrap  undersource-->
     <script type="text/javascript" src="lib/bootstrap/ng/ui-bootstrap-tpls-0.13.0.min.js"></script>
     <script type="text/javascript" src="lib/toast/angular-toastr.tpls.min.js"></script>
     <script type="text/javascript" src="lib/underscore/underscore-min.js"></script>
+
 
     <!-- 配置 -->
     <script type="text/javascript"  src="js/app.js"></script>
@@ -47,29 +64,56 @@
 
     <!-- 业务控制器 -->
     <script type="text/javascript" src="js/controller/main.ctrl.js?v=109"></script>
-    <script type="text/javascript" src="js/controller/index/index.ctrl.js"></script>
-    <script type="text/javascript" src="js/controller/detail/detail.ctrl.js"></script>
+    <script type="text/javascript" src="js/controller/auth/login.ctrl.js"></script>
+
+    <script type="text/javascript" src="js/controller/function/basic/basic.ctrl.js"></script>
+    <script type="text/javascript" src="js/controller/function/basic/puv.ctrl.js"></script>
+    <script type="text/javascript" src="js/controller/function/user/user.ctrl.js"></script>
+    <script type="text/javascript" src="js/controller/function/biz/biz.ctrl.js"></script>
+    <script type="text/javascript" src="js/controller/function/biz/vitality.ctrl.js"></script>
+    <script type="text/javascript" src="js/controller/function/compare/compare.ctrl.js"></script>
+    <script type="text/javascript" src="js/controller/function/user/general.ctrl.js"></script>
+    <script type="text/javascript" src="js/controller/function/user/portrait.ctrl.js"></script>
+    <script type="text/javascript" src="js/controller/function/user/remain.ctrl.js"></script>
+
+
     <!-- 业务service -->
     <script type="text/javascript" src="js/services/util.sev.js"></script>
     <script type="text/javascript" src="js/services/index.sev.js"></script>
+    <script type="text/javascript" src="js/services/auth/auth.sev.js"></script>
+    <script type="text/javascript" src="js/services/function/basic/basic.sev.js"></script>
+    <script type="text/javascript" src="js/services/function/user/user.sev.js"></script>
+    <script type="text/javascript" src="js/services/function/biz/biz.sev.js"></script>
+    <script type="text/javascript" src="js/services/function/biz/vitality.sev.js"></script>
+    <script type="text/javascript" src="js/services/function/compare/compare.sev.js"></script>
+    <script type="text/javascript" src="js/services/function/user/general.sev.js"></script>
+    <script type="text/javascript" src="js/services/function/user/remain.sev.js"></script>
+    <script type="text/javascript" src="js/services/function/user/portrait.sev.js"></script>
+
+    <script type="text/javascript" src="js/services/chart.help.sev.js"></script>
+    <script type="text/javascript" src="js/services/common/toolbar_ctrl.sev.js"></script>
+
 
     <!-- filter -->
     <script type="text/javascript" src="js/filters/filters.js"></script>
 
     <!-- directive -->
     <script type="text/javascript" src="js/dirs/imglazy.dir.js"></script>
+    <script type="text/javascript" src="js/dirs/ng-echart.dir.js"></script>
 
+    <!--<script type="text/javascript" src="dist/js/all.js"></script>-->
+
+    <!-- lib -->
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/echart/echart.js"></script>
+    <script type="text/javascript" src="lib/cryp/sha1.js"></script>
 
 
 </head>
 
 <body  ng-app="App" ng-controller="MainCtrl">
-
-    <header   ng-include="'tpl/common/header.html'" ></header>
-
     <section ui-view class="main-content"></section>
 
-    <footer ng-include="'tpl/common/footer.html'"></footer>
 
 
 </body>

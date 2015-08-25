@@ -1,15 +1,25 @@
-
+@charset "utf-8";
 //sass 函数库
 @import "common/fn/fun";
 
 
 //公共部分
+@import "common/var";
 @import "common/img";
+@import "common/nav";
+@import "common/btn-group";
 @import "common/template";
 
+
+//组件
+@import "components/component";
 
 
 //页面业务
 @import "index/index";
+
+//登录
+
+@import "auth/login/login";
 
 

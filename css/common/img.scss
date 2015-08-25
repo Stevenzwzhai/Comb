@@ -1,28 +1,96 @@
+@charset "utf-8";
 //图片相关引入类
 
 
 
-.iphone-bg{
-  background-image: url("../imgs/ip6.png");
-  background-size: 100%  100%;
-  width: (529/1.65) * 1px;
-  height: (1024/1.65) * 1px;
-  position: relative;
+//1x图片
+.logo-small{
+  background-image: url("../imgs/logo-small.png");
+  width: 90px;
+  height: 37px;
+
 }
 
+.bg-pic{
+  background-image: url("../imgs/bg-pic.png");
+  width: 982px;
+  height: 527px;
+}
+
+.bg-title{
+  background-image: url("../imgs/bg-title.png");
+  width: 392px;
+  height: 129px;
+
+}
+
+.login-seq{
+  background-image: url("../imgs/login-seq.png");
+  width: 948px;
+  height: 270px;
+}
+
+.lock{
+  background-image: url("../imgs/lock.png");
+  width: 12px;
+  height: 16px;
+}
+
+.male{
+  background-image: url("../imgs/male.png");
+  width: 14px;
+  height: 16px;
+}
 
 .logo{
-  background: url("../imgs/logo@2x.png");
-  background-size: 100%  100%;
-  width: (496/2) * 1px;
-  height: (80/2) * 1px;
-}
-.loginLogo{
-  background:url("../imgs/loginLogo.png");
-  background-size: 100%  100%;
-  width: (496/2) * 1px;
-  height: (80/2) * 1px;
+  background-image: url("../imgs/logo.png");
+  width: 111px;
+  height: 46px;
 }
 
+
+//2x图片
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+
+  .logo-small{
+    background-image: url("../imgs/2x/logo-small@2x.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+
+  .bg-pic{
+    background-image: url("../imgs/2x/bg-pic@2x.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .bg-title{
+    background-image: url("../imgs/2x/bg-title@2x.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .login-seq{
+    background-image: url("../imgs/2x/login-seq@2x.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .lock{
+    background-image: url("../imgs/2x/lock@2x.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .male{
+    background-image: url("../imgs/2x/male@2x.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+
+}
 
 

@@ -3,7 +3,12 @@
 //字体样式
 html,body{
   font-family: "Helvetica Neue",Helvetica, "微软雅黑","Microsoft YaHei",Arial, sans-serif;
+
+  //全局字体样式
+  color: #646464;
 }
+
+
 
 
 //蓝色超链接
@@ -46,10 +51,174 @@ a{
 .btn.active:focus,
 .btn.focus,
 .btn:active.focus,
-.btn.active.focus{
+.btn.active.focus,
+a:focus,a:active{
   outline: none;
 }
 
 textarea,input{
   outline: none;
+}
+
+
+
+h1,h2,h3,h4,h5{
+  font-weight: normal;
+}
+
+
+//动画bughack
+.no-ng.ng-animate {
+  -webkit-animation: none 0s;
+  animation: none 0s;
+  -moz-animation: none 0s;
+  -ms-animation: none 0s;
+}
+
+//loading 按钮
+.loading-icon{
+  width: 14px;
+  height: 14px;
+  border: solid 2px transparent;
+  border-top-color: #44b549;
+  border-left-color: #44b549;
+  border-radius: 10px;
+  -webkit-animation: loading-bar-spinner 400ms linear infinite;
+  -moz-animation: loading-bar-spinner 400ms linear infinite;
+  -ms-animation: loading-bar-spinner 400ms linear infinite;
+  -o-animation: loading-bar-spinner 400ms linear infinite;
+  animation: loading-bar-spinner 400ms linear infinite;
+
+  &.loading-inverse{
+    border-top-color: #fff;
+    border-left-color: #fff;
+  }
+}
+
+
+.h100{
+  height: 100%;
+}
+
+
+
+
+.arrow-gray-small{
+  color: #cccccc;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.font-16{
+  font-size: 16px;
+}
+.font-14{
+  font-size: 16px;
+}
+
+
+//nav
+header.honey-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 199;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
+
+
+  //position: fixed;
+  //top: 0;
+  //left: 0;
+  //width: 100%;
+  //z-index: 199;
+
+
+  height: $header-height;
+  background:$header-bg;
+  padding-left: $nav-width;
+
+  .product-title{
+    font-size: 20px;
+    margin-left: 30px;
+  }
+
+  //登出menu
+  .login-out-drop{
+    left: -26px;
+    top: 53px;
+    border: 0;
+    border-radius: 0;
+
+  }
+
+
+  .right-seq{
+
+      margin-right: 30px;
+
+      .userName{
+        font-size: 16px;
+      }
+
+    .right-seq-content{
+      position: relative;
+      top: 2px;
+      margin-left: 16px;
+    }
+
+    .arrow-gray-small{
+      margin-left: 13px;
+      position: relative;
+      bottom: 1px;
+    }
+
+    .header-face{
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+    }
+  }
+}
+
+
+
+
+
+//content
+.honey-content{
+  padding-top: $header-height;
+  padding-left: $nav-width;
+}
+
+//wrap
+.honey-wrap{
+  margin: $honey-wrap-margin;
+  background: #ffffff;
+  min-height: $honey-wrap-min-height;
+
+  .honey-inner{
+    padding: $honey-inner-padding;
+  }
+}
+
+
+
+.mr15{
+  margin-right: 15px;
+}
+.ml15{
+  margin-left: 15px;
+}
+
+.nav-icon{
+
+}
+
+
+
+//toast 操作hack
+#toast-container{
+  z-index: 199
 }

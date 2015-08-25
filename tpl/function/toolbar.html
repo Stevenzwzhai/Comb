@@ -1,0 +1,54 @@
+<div class="tb-box">
+
+    <div class="tb-col tb-col-left " ng-hide="showTime">
+        <h5 class="time ib">{{rangeScope.first}} &emsp; - &emsp;{{rangeScope.last}}</h5>
+    </div>
+
+    <div class="tb-col text-right select-platform" ng-hide="platformHide">
+        <label>选择平台:</label>
+
+        <div class="btn-group btn-selector">
+            <label class="btn " ng-model="fm.from" btn-radio="'all'">全部</label>
+            <label class="btn " ng-model="fm.from" btn-radio="'web'">网页</label>
+            <label class="btn " ng-model="fm.from" btn-radio="'app'">APP</label>
+        </div>
+    </div>
+
+</div>
+
+<div class="tb-box mt20 mb30">
+
+
+    <div class="tb-col tb-col-left ">
+        <div class="btn-group btn-selector" ng-hide="latelyHide">
+            <lable class="btn" ng-model="fm.day" btn-radio="'today'" ng-show="generalShow">今天</lable>
+            <label class="btn " ng-model="fm.day" btn-radio="'30'">最近30天</label>
+            <label class="btn " ng-model="fm.day" btn-radio="'60'">最近60天</label>
+            <label class="btn " ng-model="fm.day" btn-radio="'90'">最近90天</label>
+        </div>
+
+    </div>
+
+
+    <div class="tb-col text-right">
+        <div class="tb-col-left-user">
+
+            <pretty-radio  ng-repeat="r in radioList" value="'{{r.value}}'"  ng-model="fm.userType" label="'{{r.name}}'"
+                          class="radio-select "></pretty-radio>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="tb-box ">
+    <div class="tb-col text-center">
+        <div class="btn-group btn-selector">
+            <label class="btn " ng-model="fm.grain" btn-radio="'{{g.value}}'"
+                   ng-repeat="g in grainList">{{g.name}}</label>
+        </div>
+    </div>
+</div>
+
+
+

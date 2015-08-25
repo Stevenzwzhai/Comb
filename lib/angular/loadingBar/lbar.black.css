@@ -124,13 +124,24 @@
 
 
 
+/*#loading-bar .bar {*/
+    /*background: #292c30*/
+/*}*/
+/*#loading-bar .peg {*/
+    /*box-shadow: 0 0 10px #292c30, 0 0 5px #292c30;*/
+/*}*/
+/*#loading-bar-spinner .spinner-icon {*/
+    /*border-top-color:  #292c30;*/
+    /*border-left-color: #292c30;*/
+/*}*/
+
 #loading-bar .bar {
-    background: #44b549
+    background: #fccf1b
 }
 #loading-bar .peg {
-    box-shadow: 0 0 10px #44b549, 0 0 5px #44b549;
+    box-shadow: 0 0 10px #fccf1b, 0 0 5px #fccf1b;
 }
 #loading-bar-spinner .spinner-icon {
-    border-top-color:  #44b549;
-    border-left-color: #44b549;
+    border-top-color:  #fccf1b;
+    border-left-color: #fccf1b;
 }

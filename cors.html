@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>cors写入cookie</title>
+</head>
+<body>
+
+
+    <script type="text/javascript">
+        window.addEventListener("message",function(e){
+            console.log(e.data);
+            var obj = JSON.parse(e.data);
+            document.cookie=obj.name+"="+ obj.value+"; path=/";
+        });
+    </script>
+
+</body>
+</html>

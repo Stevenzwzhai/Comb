@@ -1,0 +1,27 @@
+<div class="logo-layer text-center">
+    <a href="javascript:void(0);" class="ib logo"></a>
+</div>
+
+
+
+<accordion close-others="closeNavOther" class="rootMenu" >
+    <accordion-group  is-open="menu.open"  ng-repeat="menu in $root.menuList">
+        <accordion-heading>
+            <i class="nav-icon  {{::menu.menuIcon}}  mr15" ></i>
+           {{::menu.menuName}}
+            <i class="pull-right fa fa-angle-right icon-nav-position  "
+               ng-class="{'fa-angle-down': menu.open, 'fa-angle-right': !menu.open}"></i>
+        </accordion-heading>
+
+        <ul class="submenu">
+            <li ng-repeat="sub in menu.subMenu">
+                <a class="" ng-class="{'active' : $root.navActive == sub.menuUrl  }"  ng-href="{{sub.menuUrl}}"  >{{::sub.menuName}}</a>
+            </li>
+        </ul>
+
+    </accordion-group>
+
+
+
+</accordion>
+

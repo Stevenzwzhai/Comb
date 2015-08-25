@@ -1,0 +1,37 @@
+.text-center{
+    text-align: center;
+}
+.skull{
+    position: relative;
+    left:50%;
+    margin-left: -169px;
+    margin-top:  50px;
+}
+.text-default{
+    color:black;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.font-red{
+    color: red;
+    font-size: 30px;
+}
+.arrow{
+    position: relative;
+    left: 50%;
+    margin-left: -291px;
+    margin-top: -264px;
+}
+.ib{
+    display: inline-block;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mr20{
+    margin-right: 50px;
+}
+.img-icon{
+    width: 40px;
+    height: 40px;
+}

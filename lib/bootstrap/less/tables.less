@@ -30,6 +30,7 @@ th {
     > tr {
       > th,
       > td {
+        font-weight: normal;
         padding: @table-cell-padding;
         line-height: @line-height-base;
         vertical-align: top;
@@ -87,10 +88,23 @@ th {
 
 .table-bordered {
   border: 1px solid @table-border-color;
+  border-left: 0;
+  border-right: 0;
+
   > thead,
   > tbody,
   > tfoot {
     > tr {
+
+      > th:first-child,
+      > td:first-child {
+        border-left: 0;
+      }
+      > th:last-child,
+      > td:last-child {
+        border-right: 0;
+      }
+
       > th,
       > td {
         border: 1px solid @table-border-color;
@@ -100,7 +114,7 @@ th {
   > thead > tr {
     > th,
     > td {
-      border-bottom-width: 2px;
+      //border-bottom-width: 2px;
     }
   }
 }
@@ -199,7 +213,6 @@ table {
     // Special overrides for the bordered tables
     > .table-bordered {
       border: 0;
-
       // Nuke the appropriate borders so that the parent can handle them
       > thead,
       > tbody,

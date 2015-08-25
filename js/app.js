@@ -7,20 +7,17 @@
 
 
 
-
 var App = angular.module('App', [
     'ui.router',
     'ui.bootstrap',
     'ngAnimate',
     'angular-loading-bar',
     "toastr",
-    'ngCookies',
+    'ipCookie',
+    'pretty-checkable',
     'app.dir',
     'app.filter'
 ]);
-
-
-
 
 
 

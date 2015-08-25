@@ -1,0 +1,48 @@
+
+.component {
+
+  .time{
+    font-size: 16px;
+    padding-left: 10px;
+    font-weight: 200;
+  }
+
+  .select-platform{
+    label{
+      margin-right: 10px;
+    }
+  }
+
+  .radio-select{
+    color:#afafaf ;
+    display: inline-block;
+    margin-right: 20px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &:checked{
+
+      label{
+        color: #202020;
+      }
+    }
+  }
+
+  .tb-col-left{
+    text-align: left;
+  }
+  .tb-col-left-user{
+    padding-right: 22px;
+  }
+  .font-black{
+
+  }
+
+  .tb-col{
+    vertical-align: middle;
+  }
+
+}
+

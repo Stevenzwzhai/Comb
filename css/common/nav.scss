@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+//nav
+.honey-nav{
+  width: $nav-width;
+  background-color: $nav-bg;
+
+  .icon-nav-position{
+    font-size: 22px;
+    position: relative;
+    bottom: 4px;
+  }
+
+
+  //定位
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100%;
+  z-index: 200;
+
+
+
+  .logo-layer{
+    height: 110px;
+    .logo{
+      position: relative;
+      top: 50%;
+      margin-top: (-46/2) * 1px;
+      left: -10px;
+    }
+  }
+
+}
+
+
+//主菜单
+.rootMenu{
+  .panel{
+    box-shadow : 0;
+    border : 0 ;
+    border-radius : 0;
+    background-color : transparent;
+
+    .panel-heading{
+      border : 0 ;
+      border-radius : 0;
+      background-color : transparent;
+      color: $nav-font-color;
+      padding: 0;
+
+
+
+      &:hover{
+        background-color: #303336;
+      }
+
+
+      .panel-title{
+        a{
+          display: block;
+          padding: 21px 15px 21px 30px;
+        }
+      }
+
+
+    }
+
+    .panel-body{
+      background-color : $nav-sub-bg;
+      padding: 0;
+    }
+
+  }
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group{
+  border : 0;
+}
+
+//子菜单
+.submenu{
+
+  li{
+
+    a{
+
+      &:hover{
+        background-color: #2a2d31;
+      }
+
+      &.active{
+        background-color : #fff;
+        color: #292c30;
+
+        border-left: 5px solid #fdd01b;
+        padding-left: 62px;
+       }
+
+
+      padding: 20px 15px 20px 67px;
+      color: $nav-font-sub-color;
+      display: block;
+    }
+  }
+}

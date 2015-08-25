@@ -1,0 +1,212 @@
+@charset "utf-8";
+
+/** 登录 **/
+.ib{
+  display: inline-block;
+}
+
+html,body{
+  background: #e9ecf0;
+}
+
+
+ul,li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header.login-header{
+  background: #2c3034;
+  height: 63px;
+}
+
+
+//去除边框
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus{
+  outline: none;
+}
+
+
+textarea,input{
+  outline: none;
+}
+
+
+
+.login-form{
+  background: white;
+}
+
+
+//禁用响应式
+.container{
+  width: 1000px !important;;
+}
+
+
+.h100{
+  height: 100%;
+}
+.tb{
+  display: table;
+
+  .cell{
+    display: table-cell;
+  }
+
+  .vm{
+    vertical-align: middle;
+  }
+  .vt{
+    vertical-align: top;
+  }
+}
+
+
+section.login-content{
+
+  //最小高度
+ min-height: 500px;
+
+  .bg-pic{
+    position: relative;
+
+    .bg-title{
+      position: absolute;
+      left: 0px;
+      top: 248px;
+    }
+  }
+
+
+
+  .login-seq{
+    margin-top: -90px;
+  }
+
+
+  //登录
+  .login-form{
+    padding: 24px 46px  30px 46px;
+    display: inline-block;
+
+    position: absolute;
+    top: 160px;
+    width: 390px;
+    right: 0;
+    z-index: 3;
+
+    border-radius: 10px;
+
+    .login-form-header{
+      font-size: 18px;
+      font-weight: normal;
+      color: #202020;
+      margin: 0;
+    }
+
+
+    .checkbox{
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .login-input{
+      height: 42px;
+      margin-top: 20px;
+      margin-bottom: 0;
+
+
+
+      .input-group-addon{
+        border: 1px solid #e5e5e5;
+        border-right: 0;
+        background: white;
+      }
+
+      input{
+        border: 1px solid #e5e5e5;
+        box-shadow: none;
+        height: 42px;
+      }
+    }
+  }
+
+}
+
+
+.btn-primary{
+  color: #fff;
+  background-color: #28a1ff;
+  border-color: #28a1ff;
+
+  &:hover{
+    background-color: #4cadf9;
+    border-color: #4cadf9;
+  }
+  &:active{
+    background-color: #4cadf9;
+    border-color: #4cadf9;
+  }
+  &:focus{
+    background-color: #4cadf9;
+    border-color: #4cadf9;
+  }
+}
+
+
+footer.login-footer{
+
+
+position: fixed;
+  bottom: 0;
+  left: 0;
+
+
+
+  height: 42px;
+  background: #fff;
+  text-align: center;
+  width: 100%;
+  .footer-list{
+    overflow: hidden;
+    clear: both;
+
+    display: inline-block;
+    line-height: 45px;
+
+
+    li{
+      float: left;
+      a{
+        display: block;
+        color: #707070;
+        font-size: 12px;
+
+        &:after{
+          content: "|";
+          margin: 0 8px;
+
+
+        }
+
+        &.end:after{
+          content: "";
+        }
+
+
+      }
+    }
+  }
+
+}
+
+
+
+

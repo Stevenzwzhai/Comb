@@ -1,0 +1,63 @@
+[
+  {
+    "menuName" : "基础分析",
+    "menuIcon" : "fa fa-bar-chart",
+
+    "subMenu" : [
+
+      {
+        "menuName" : "PV/UV",
+        "menuUrl"  : "#/app/fun/puv"
+      }
+
+    ]
+
+  },
+
+
+  {
+    "menuName" : "用户分析",
+    "menuIcon" : "fa fa-users",
+    "open" : "true",
+
+    "subMenu" : [
+      {
+        "menuName" : "概况",
+        "menuUrl"  : "#/app/fun/general"
+      },
+      {
+        "menuName" : "留存",
+        "menuUrl"  : "#/app/fun/remain"
+      }
+
+    ]
+  },
+
+  {
+      "menuName" : "环比分析",
+      "menuIcon" : "fa fa-pie-chart",
+
+      "subMenu" : [
+        {
+          "menuName" : "环比数据",
+          "menuUrl"  : "#/app/fun/compare"
+        }
+
+      ]
+    },
+
+
+  {
+    "menuName" : "业务分析",
+    "menuIcon" : "fa fa-area-chart",
+
+    "subMenu" : [
+
+      {
+        "menuName" : "活跃度",
+        "menuUrl"  : "#/app/fun/vitality"
+      }
+    ]
+  }
+
+]
