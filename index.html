@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title></title>
+
+    <!-- 防止缓存 -->
+    <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Expires" CONTENT="0">
+
+    <!-- 基本配置 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="format-detection" content="telphone=no, email=no"/>
+
+
+    <!-- skin -->
+    <link rel="stylesheet" type="text/css"   href="lib/bootstrap/less/bootstrap.css" />
+    <link rel="stylesheet" type="text/css"   href="lib/toast/angular-toastr.min.css" />
+    <link rel="stylesheet" href="lib/angular/loadingBar/lbar.black.css" />
+    <link rel="stylesheet" href="css/common/module.css" />
+
+    <!-- 业务 -->
+    <link rel="stylesheet"   href="css/all.css" />
+
+    <!-- angular主库 -->
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-animate.min.js"></script>
+    <script type="text/javascript" src="lib/angular/loadingBar/loading-bar.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-cookies.js"></script>
+
+    <!-- bootstrap  undersource-->
+    <script type="text/javascript" src="lib/bootstrap/ng/ui-bootstrap-tpls-0.13.0.min.js"></script>
+    <script type="text/javascript" src="lib/toast/angular-toastr.tpls.min.js"></script>
+    <script type="text/javascript" src="lib/underscore/underscore-min.js"></script>
+
+    <!-- 配置 -->
+    <script type="text/javascript"  src="js/app.js"></script>
+    <script type="text/javascript"  src="js/config.js"></script>
+    <script type="text/javascript"  src="js/config.router.js"></script>
+
+    <!-- 拦截器 -->
+    <script type="text/javascript" src="js/services/interceptors/ajaxInterceptors.js"></script>
+
+    <!-- 业务控制器 -->
+    <script type="text/javascript" src="js/controller/main.ctrl.js?v=109"></script>
+    <script type="text/javascript" src="js/controller/index/index.ctrl.js"></script>
+    <script type="text/javascript" src="js/controller/detail/detail.ctrl.js"></script>
+    <!-- 业务service -->
+    <script type="text/javascript" src="js/services/util.sev.js"></script>
+    <script type="text/javascript" src="js/services/index.sev.js"></script>
+
+    <!-- filter -->
+    <script type="text/javascript" src="js/filters/filters.js"></script>
+
+    <!-- directive -->
+    <script type="text/javascript" src="js/dirs/imglazy.dir.js"></script>
+
+
+
+</head>
+
+<body  ng-app="App" ng-controller="MainCtrl">
+
+    <header   ng-include="'tpl/common/header.html'" ></header>
+
+    <section ui-view class="main-content"></section>
+
+    <footer ng-include="'tpl/common/footer.html'"></footer>
+
+
+</body>
+</html>
