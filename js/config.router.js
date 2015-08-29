@@ -3,7 +3,7 @@
 
 /**
  * 配置路由
- * @sherlock221b
+ * @zwzhai
  */
 App.config(
     function ($stateProvider, $urlRouterProvider, VERSION) {

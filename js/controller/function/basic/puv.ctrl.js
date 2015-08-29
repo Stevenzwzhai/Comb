@@ -46,7 +46,6 @@ App.controller("PUVCtrl",function($rootScope,$scope,Util,SERVER,BasicSev,Nav,VER
             strJson[arrKey[i]+"时"] = arrValue[i];
             console.log(strJson[arrKey[i]]);
         }
-        console.log(strJson);
         return strJson;
     }
 

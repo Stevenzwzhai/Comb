@@ -28,10 +28,10 @@ App
                     ],
                     function (ec) {
                         // 基于准备好的dom，初始化echarts图表
-                        //console.log('echarts/chart/'+scope.chartType);
                         element[0].style.display ="block";
                         element[0].style.width =  scope.width  || "";
                         element[0].style.height = scope.height ||  "400px";
+                        //初始化并设置其皮肤
                         var myChart = ec.init(element[0],CharTheme.Blue);
 
 
