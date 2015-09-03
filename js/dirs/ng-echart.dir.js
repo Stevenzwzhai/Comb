@@ -34,7 +34,6 @@ App
                         //初始化并设置其皮肤
                         var myChart = ec.init(element[0],CharTheme.Blue);
 
-
                         scope.option=scope.option?scope.option:"";
                         // 为echarts对象加载数据
                         myChart.setOption(scope.option);
